@@ -41,7 +41,21 @@ nav {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
-.nav-logo img { height: 66px; }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 0 12px rgba(155, 89, 245, 0.4));
+  transition: all 0.3s ease;
+}
+.nav-logo:hover {
+  filter: drop-shadow(0 0 20px rgba(155, 89, 245, 0.6));
+  transform: translateY(-2px);
+}
+.nav-logo img { 
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a {
   font-size: 14px; font-weight: 500; letter-spacing: .5px;
